@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		DD287BB7211C25250039A944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD287BB6211C25250039A944 /* AppDelegate.swift */; };
-		DD287BB9211C25250039A944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD287BB8211C25250039A944 /* ViewController.swift */; };
+		DD287BB9211C25250039A944 /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD287BB8211C25250039A944 /* MoviesController.swift */; };
 		DD287BBC211C25250039A944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD287BBA211C25250039A944 /* Main.storyboard */; };
 		DD287BBE211C25270039A944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD287BBD211C25270039A944 /* Assets.xcassets */; };
+		DD287BC6211C2CF70039A944 /* MoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD287BC5211C2CF70039A944 /* MoviesCell.swift */; };
+		DD287BC8211CDDBF0039A944 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD287BC7211CDDBF0039A944 /* MovieModel.swift */; };
+		DD287BCA211CE1080039A944 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD287BC9211CE1080039A944 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD287BB3211C25250039A944 /* popular-movies-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "popular-movies-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD287BB6211C25250039A944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD287BB8211C25250039A944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD287BB8211C25250039A944 /* MoviesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesController.swift; sourceTree = "<group>"; };
 		DD287BBB211C25250039A944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD287BBD211C25270039A944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD287BBF211C25270039A944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD287BC5211C2CF70039A944 /* MoviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCell.swift; sourceTree = "<group>"; };
+		DD287BC7211CDDBF0039A944 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		DD287BC9211CE1080039A944 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				DD287BB6211C25250039A944 /* AppDelegate.swift */,
-				DD287BB8211C25250039A944 /* ViewController.swift */,
+				DD287BB8211C25250039A944 /* MoviesController.swift */,
 				DD287BBA211C25250039A944 /* Main.storyboard */,
 				DD287BBD211C25270039A944 /* Assets.xcassets */,
 				DD287BBF211C25270039A944 /* Info.plist */,
+				DD287BC5211C2CF70039A944 /* MoviesCell.swift */,
+				DD287BC7211CDDBF0039A944 /* MovieModel.swift */,
+				DD287BC9211CE1080039A944 /* Service.swift */,
 			);
 			path = "popular-movies-tvOS";
 			sourceTree = "<group>";
@@ -131,7 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD287BB9211C25250039A944 /* ViewController.swift in Sources */,
+				DD287BC8211CDDBF0039A944 /* MovieModel.swift in Sources */,
+				DD287BB9211C25250039A944 /* MoviesController.swift in Sources */,
+				DD287BCA211CE1080039A944 /* Service.swift in Sources */,
+				DD287BC6211C2CF70039A944 /* MoviesCell.swift in Sources */,
 				DD287BB7211C25250039A944 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YT3VFVK232;
 				INFOPLIST_FILE = "popular-movies-tvOS/Info.plist";
@@ -274,8 +287,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.onyekachi.popular-movies-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.onyekachi.popular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -286,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YT3VFVK232;
 				INFOPLIST_FILE = "popular-movies-tvOS/Info.plist";
@@ -293,8 +308,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.onyekachi.popular-movies-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.onyekachi.popular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
